@@ -156,11 +156,9 @@ void findEntry(std::string key) {
 template<typename T, typename J>
 void print_monitor_data(std::vector<T> t_vect, std::vector<J> j_vect) {
     std::cout << "--engine " << typeid(T).name() << "--" << std::endl;
-
     for (T t_vector : t_vect) { t_vector.monitor(); }
 
     std::cout << "--engine " << typeid(J).name() << "--" << std::endl;
-
     for (J j_vector : j_vect) { j_vector.monitor(); }
 
 }
@@ -253,6 +251,7 @@ int main()
 {
     std::cout << "Elijah Hickey - 2021.12.5\n";
     std::cout << "\nEngine Management System.\n" << std::endl;
+
     menu::init();
     char input = 'z';
     while (toupper(input) != 'E') {
